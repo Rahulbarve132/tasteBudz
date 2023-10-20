@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.listItem {
+    @apply px-3 mx-2 font-semibold hover:text-orange-400 hover:font-bold;
+ }
