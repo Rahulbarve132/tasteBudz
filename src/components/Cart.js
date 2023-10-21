@@ -54,20 +54,7 @@ const Cart = () => {
           <div className='mt-7 py-3 px-5 capitalize bg-[#fc8019] text-white font-semibold cursor-pointer text-base text-center border-0 outline-0'><Link to='/'>See Restaurants Near You</Link></div>
         </div>
       )}
-      {/* <div className="flex" data-testid="cart-items">
-        {cartItems.map((item) => (
-          <div key={item.id}>
-            <FoodItem  {...item} />
-            <button
-              data-testid="removeBtn"
-              className="p-1 bg-green-50"
-              onClick={() => handleRemoveItem(item)}
-            >
-              Remove Item
-            </button>
-          </div>
-        ))}
-      </div> */}
+      
     </div>
 
   )

@@ -38,17 +38,18 @@ const FoodItem = () => {
   const handleDecreamentFoodItem = (item) => {
     disptach(decreamentItem(item));
   };
+  
 
   const getItemCount = (item) => {
-    const currentItem = cartItems.find((cartItem) => item?.card? .info?.id === cartItem.id);
+    const currentItem = cartItems.find((cartItem) => item?.card?.info?.id === cartItem.id);
     return currentItem ? currentItem.quantity : 0;
   };
 
   const getTotal = () => {
-    const total = cartItems.reduce(
-      (sum, current) => sum + current.price * current.quantity,
-      0.0
-    );
+    let total = 0;
+    for (const item of cartItems) {
+      total += item.card.info.price;
+    }
     return total;
   };
   const handleClearCart = () => {

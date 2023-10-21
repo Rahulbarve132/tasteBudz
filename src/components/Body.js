@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { FilterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import {IoSearchOutline} from "react-icons/io5"
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -40,10 +41,10 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="Search-container py-2 flex justify-center" >
+      <div className="Search-container mx-6 flex justify-center border mt-2 rounded-2xl border-gray-300" >
         <input
           type="text"
-          className="Search-input w-full mx-8 my-2 border px-4 py-2 rounded-xl  "
+          className="Search-input w-full mx-8  px-4  focus:outline-none "
           placeholder="Search for Restaurant and Food"
           value={SearchText}
           onChange={(e) => {
@@ -52,7 +53,7 @@ const Body = () => {
        
         />
           <button
-            className="search-btn bg-orange-400 h-10 w-28 my-3 mr-5  mx-5 mr-10 rounded-lg text-lg font-bold"
+            className="search-btn  my-3  mx-5 mr-10 "
             onClick={() => {
               // need to filter the data
               const data = FilterData(SearchText, allRestaurants);
@@ -61,7 +62,7 @@ const Body = () => {
             }}
             
           >
-            Search
+            <IoSearchOutline size={30} />
           </button>     
       </div>
       <div className="restaurant-list flex flex-wrap justify-center mx-3">

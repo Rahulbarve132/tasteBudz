@@ -8,6 +8,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { AiFillStar } from "react-icons/ai";
 import { TbCoinRupee } from "react-icons/tb";
 import { BsCircleHalf } from "react-icons/bs";
+import { Audio } from 'react-loader-spinner';
 
 
 const RestaurantMenu = () => {
@@ -109,7 +110,17 @@ const RestaurantMenu = () => {
               <hr />
             </>
           ) : (
-            <p>Loading...</p>
+            <div className="py-44">
+            <Audio
+  height="80"
+  width="80"
+  radius="9"
+  color="orange"
+  ariaLabel="loading"
+  wrapperStyle
+  wrapperClass
+/>
+</div>
           )}
           {restaurant ? (
             <div className="menu p-5">
