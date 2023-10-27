@@ -36,7 +36,7 @@ const RestaurantMenu = () => {
                     Home/{restaurant?.cards[0]?.card?.card?.info?.city} /
                   </p>
                   <p className="text-gray-700 text-sm px-2">
-                    {restaurant?.cards[0]?.card?.card?.info?.name}{" "}
+                    {restaurant?.cards[0]?.card?.card?.info?.name}
                   </p>
                 </div>
                 <IoSearchOutline size={25} />
@@ -147,9 +147,9 @@ const RestaurantMenu = () => {
                   <img className='rounded-lg h-24 ' src={ IMG_CDN_URL + item?.card?.info?.imageId} />
                   <button
                         onClick={() => addFoodItem(item)}
-                        className="p-1 m-1  border-[1px] border-black "
+                        className="p-1 m-1  border-[1px] border-black rounded-lg font-semibold text-[#3e4152] flex justify-center items-center hover:bg-orange-100 "
                       >
-                        Add
+                        Add +
                       </button>
                       </div>
 
